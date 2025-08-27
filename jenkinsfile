@@ -24,5 +24,27 @@ pipeline {
                 }
             }
         }
+        stage('Docker Login') {
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'nexus-deployuser',
+                                                     usernameVariable: 'USERNAME',
+                                                     passwordVariable: 'PASSWORD')]) {
+                        sh "echo $DOCKER_PASS | docker login $REGISTRY -u $USERNAME --password-stdin"
+                    }
+                }
+            }
+        }
+
+        stage('Docker Push') {
+            steps {
+                script {
+                    sh """
+                    docker push $REGISTRY/$IMAGE_NAME:$VERSION
+                    docker push $REGISTRY/$IMAGE_NAME:latest
+                    """
+                }
+            }
+        }
     }
 }
