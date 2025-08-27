@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
 
-FROM --platform=${BUILDPLATFORM} golang:1.19-alpine3.15 AS builder
+FROM --platform=${BUILDPLATFORM} golang:1.23-alpine AS builder
 
-RUN apk add git
+RUN apk add --no-cache git
 
 WORKDIR /go/src/app
 COPY . .
@@ -26,5 +26,5 @@ COPY --from=builder /go/src/app/config.json /config
 
 ENV GO111MODULE="on"
 ENV GIN_MODE="release"
-
+EXPOSE 8083
 CMD ["./rtsp-to-web", "--config=/config/config.json"]
