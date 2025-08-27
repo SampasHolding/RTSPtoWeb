@@ -30,7 +30,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'user-nexus',
                                                      usernameVariable: 'USERNAME',
                                                      passwordVariable: 'PASSWORD')]) {
-                        sh "echo $DOCKER_PASS | docker login $REGISTRY -u $USERNAME --password-stdin"
+                        sh "echo $PASSWORD | docker login $REGISTRY -u $USERNAME --password-stdin"
                     }
                 }
             }
