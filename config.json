@@ -1,4 +1,16 @@
 {
+  "channel_defaults": {
+    "debug": true,
+    "webrtc": {
+      "enabled": true,
+      "video": {
+        "codec": "h264",
+        "profile": "baseline",
+        "level": "3.1"
+      },
+      "disable_audio": true
+    }
+  },
   "server": {
     "debug": true,
     "http_debug": false,
@@ -13,26 +25,181 @@
     "https_cert": "server.crt",
     "https_key": "server.key",
     "https_port": ":443",
-    "ice_servers": ["stun:stun.l.google.com:19302"],
+    "ice_credential": "",
+    "ice_servers": [
+      "stun:stun.l.google.com:19302"
+    ],
+    "ice_username": "",
     "log_level": "debug",
     "rtsp_port": ":5541",
     "token": {
-      "backend": "http://127.0.0.1/test.php"
+      "backend": "http://127.0.0.1/test.php",
+      "enable": false
     },
-    "defaults": {
-      "audio": true
-    }
+    "webrtc_port_max": 0,
+    "webrtc_port_min": 0
   },
   "streams": {
-    "27aec28e-6181-4753-9acd-0456a75f0289": {
+    "20065219-3782-4a80-964e-a9d3e27faab8": {
       "channels": {
         "0": {
-          "url": "rtmp://171.25.232.10/12d525bc9f014e209c1280bc0d46a87e",
-          "debug": false,
-          "audio": true
+          "url": "rtsp://Akillisehirler:Bornova1923@10.202.80.2:554/ISAPI/Streaming/Channels/101"
         }
       },
-      "name": "111111111"
+      "name": "büyükpark 101"
+    },
+    "21306315-7513-44df-96bd-40132ab72b68": {
+      "channels": {
+        "0": {
+          "url": "rtsp://Akillisehirler:Bornova1923@10.202.22.101:554/ISAPI/Streaming/Channels/1601"
+        }
+      },
+      "name": "nikah salonu 1601"
+    },
+    "22022837-0d66-4110-a0f3-9f826390758c": {
+      "channels": {
+        "0": {
+          "url": "rtsp://Akillisehirler:Bornova1923@10.202.80.2:554/ISAPI/Streaming/Channels/301"
+        }
+      },
+      "name": "büyükpark 301"
+    },
+    "25d12cf8-1751-48f2-9cd2-8439110b7689": {
+      "channels": {
+        "0": {
+          "url": "rtsp://Akillisehirler:Bornova1923@10.202.22.101:554/ISAPI/Streaming/Channels/1701"
+        }
+      },
+      "name": "nikah salonu 1701"
+    },
+    "2b0b40cd-50fd-442e-83d3-e58aa43d58a7": {
+      "channels": {
+        "0": {
+          "url": "rtsp://admin:Bornova%401881@5.26.208.24:554/Streaming/Channels/201"
+        }
+      },
+      "name": "201"
+    },
+    "2f3c222b-0bfd-47f0-8e9f-29c9ca830f9b": {
+      "channels": {
+        "0": {
+          "url": "rtsp://Akillisehirler:Bornova1923@10.202.22.101:554/ISAPI/Streaming/Channels/1401"
+        }
+      },
+      "name": "nikah salonu 1401"
+    },
+    "38477044-c5f8-4e0c-b9f5-1994808715d8": {
+      "channels": {
+        "0": {
+          "url": "rtsp://admin:Bornova%401881@5.26.208.24:554/Streaming/Channels/401"
+        }
+      },
+      "name": "401"
+    },
+    "4dc67d76-6278-4168-b027-17442510027a": {
+      "channels": {
+        "0": {
+          "url": "rtsp://Akillisehirler:Bornova1923@10.202.22.101:554/ISAPI/Streaming/Channels/1501"
+        }
+      },
+      "name": "nikah salonu 1501"
+    },
+    "4f074ac9-3577-45a6-a195-fa7b29df49a7": {
+      "channels": {
+        "0": {
+          "debug": true,
+          "url": "rtsp://Akillisehirler:Bornova1923@10.202.80.2:554/ISAPI/Streaming/Channels/201"
+        }
+      },
+      "name": "büyük park 201"
+    },
+    "5133bf84-e287-4f84-b56a-4853db1643ed": {
+      "channels": {
+        "0": {
+          "url": "rtsp://Akillisehirler:Bornova1923@10.202.22.101:554/ISAPI/Streaming/Channels/1301"
+        }
+      },
+      "name": "nikah salonu 1301"
+    },
+    "56d29680-bcf6-48a7-9c2a-edcbfdcdc624": {
+      "channels": {
+        "0": {
+          "url": "rtsp://admin:Bornova%401881@5.26.208.24:554/Streaming/Channels/701"
+        }
+      },
+      "name": "küçükpark 701"
+    },
+    "7806aa67-5665-4bdd-bee4-867d2f752554": {
+      "channels": {
+        "0": {
+          "url": "rtsp://admin:Bornova%401881@5.26.208.24:554/Streaming/Channels/301"
+        }
+      },
+      "name": "küçükpark 301"
+    },
+    "955c02c8-12e5-4e3b-9591-81be0919566f": {
+      "channels": {
+        "0": {
+          "url": "rtsp://Akillisehirler:Bornova1923@10.202.141.244:554/ISAPI/Streaming/Channels/302"
+        }
+      },
+      "name": "temizlik işleri 302"
+    },
+    "9853d294-af91-4d35-a99f-41ae13cc230a": {
+      "channels": {
+        "0": {
+          "url": "rtsp://admin:Bornova%401881@5.26.208.24:554/Streaming/Channels/901"
+        }
+      },
+      "name": "küçükpark 901"
+    },
+    "99e4378e-91bb-49ed-9f31-fe2daa1d1b4c": {
+      "channels": {
+        "0": {
+          "url": "rtsp://admin:Bornova%401881@5.26.208.24:554/Streaming/Channels/801"
+        }
+      },
+      "name": "küçüpark 801"
+    },
+    "a4dfe456-9830-4270-9302-cd72ee2566f4": {
+      "channels": {
+        "0": {
+          "url": "rtsp://Akillisehirler:Bornova1923@10.202.141.244:554/ISAPI/Streaming/Channels/102"
+        }
+      },
+      "name": "temizlik işleri 102"
+    },
+    "d4f743fb-1326-4268-a053-b49db3fd6d73": {
+      "channels": {
+        "0": {
+          "url": "rtsp://Akillisehirler:Bornova1923@10.202.141.244:554/ISAPI/Streaming/Channels/202"
+        }
+      },
+      "name": "temizlik işleri 202"
+    },
+    "d5799921-caff-4632-ad9d-14b40063dba8": {
+      "channels": {
+        "0": {
+          "url": "rtsp://admin:Bornova%401881@5.26.208.24:554/Streaming/Channels/501"
+        }
+      },
+      "name": "501"
+    },
+    "f6572a80-809e-4ba4-b59c-656a60c89334": {
+      "channels": {
+        "0": {
+          "url": "rtsp://admin:Bornova%401881@5.26.208.24:554/Streaming/Channels/601"
+        }
+      },
+      "name": "601"
+    },
+    "f72f5975-6e43-4a0d-b9fd-6350d6c36244": {
+      "channels": {
+        "0": {
+          "url": "rtsp://Akillisehirler:Bornova1923@10.202.80.2:554/ISAPI/Streaming/Channels/401"
+        }
+      },
+      "name": "büyükpark 401"
     }
   }
 }
